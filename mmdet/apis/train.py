@@ -74,6 +74,8 @@ def batch_processor(model, data, train_mode):
     """
     print("Image Data: {}".format(data['img'].data))
     print("Image File Name {}".format(data.get("filename")))
+    for k in data.keys():
+      print(data[k])
     losses = model(**data)
     loss, log_vars = parse_losses(losses)
 

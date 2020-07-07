@@ -47,6 +47,7 @@ class CocoDataset(CustomDataset):
             info['filename'] = info['file_name']
             img_infos.append(info)
             for k in info.keys():
+                print("The Key : {}.format(str(k)))
                 print(info[k])
         return img_infos
 

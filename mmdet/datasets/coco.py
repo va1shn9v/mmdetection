@@ -46,9 +46,9 @@ class CocoDataset(CustomDataset):
             info = self.coco.loadImgs([i])[0]
             info['filename'] = info['file_name']
             img_infos.append(info)
-            for k in info.keys():
-                print("The Key : {}".format(str(k)))
-                print(info[k])
+#             for k in info.keys():
+#                 print("The Key : {}".format(str(k)))
+#                 print(info[k])
         return img_infos
 
     def get_ann_info(self, idx):
